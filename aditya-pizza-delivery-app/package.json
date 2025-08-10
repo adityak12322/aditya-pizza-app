@@ -1,0 +1,43 @@
+{
+  "name": "pizza-delivery-system-app-mern",
+  "version": "1.0.0",
+  "description": "A Full-Stack Pizza Delivery Web Application with user and admin dashboards, online payments, and real-time order tracking.",
+  "scripts": {
+    "start": "node server/index --prefix server",
+    "server": "nodemon server/index --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "cd client && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install": "cd client && npm install && cd .. && cd server && npm install && cd ..",
+    "data:import": "node server/seeder",
+    "data:destroy": "node server/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityak12322/pizza-delivery-app.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "reactjs",
+    "expressjs",
+    "mern-stack",
+    "pizza-app",
+    "delivery-system",
+    "food-delivery",
+    "fullstack"
+  ],
+  "author": "ADITYA KUMAR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adityak12322/pizza-delivery-app/issues"
+  },
+  "homepage": "https://github.com/adityak12322/pizza-delivery-app#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "eslint": "^8.47.0",
+    "nodemon": "^3.0.1"
+  }
+}
