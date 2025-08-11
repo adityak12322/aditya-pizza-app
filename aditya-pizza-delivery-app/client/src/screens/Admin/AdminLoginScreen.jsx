@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
-import Logo from '/android-chrome-512x512.png';
+import Logo from '/images/generated-image.png';
 import AdminLoginForm from '../../components/ui/Admin/Auth/LoginForm';
 
 function AdminLoginScreen() {

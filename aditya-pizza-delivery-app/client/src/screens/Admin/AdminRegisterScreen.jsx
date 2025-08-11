@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import RegisterForm from '../../components/ui/Admin/Auth/RegisterForm';
-import Logo from '/android-chrome-512x512.png';
+import Logo from '/images/generated-image.png';
 
 function AdminRegisterScreen() {
   const navigate = useNavigate();
