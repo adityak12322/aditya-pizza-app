@@ -1,10 +1,10 @@
-
- { "name": "pizza-delivery-app-client",
+{
+  "name": "pizza-delivery-app-client",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "description": "Frontend for Aditya's Professional Pizza Delivery App — fully customizable, best UI, and lightning fast user experience.",
-  "author": "ADITYA KUMAR",            
+  "author": "ADITYA KUMAR",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -47,5 +47,13 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "postcss": "^8.4.28",
-    "tailwindcss": "^
-  }
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5",
+    "vite-plugin-pwa": "^0.17.4",
+    "workbox-window": "^7.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/adityak12322/pizza-delivery-app-client/issues"
+  },
+  "homepage": "https://github.com/adityak12322/pizza-delivery-app-client#readme"
+}
