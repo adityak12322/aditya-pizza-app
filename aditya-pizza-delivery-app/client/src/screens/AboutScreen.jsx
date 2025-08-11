@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '/android-chrome-512x512.png';
+import Logo from '/images/generated-image.png';
 
 function AboutScreen() {
   return (
@@ -7,12 +7,12 @@ function AboutScreen() {
       <div className="flex flex-row justify-center items-center">
         <img
           src={Logo}
-          alt="Pizza Palette Logo"
+          alt="Aditya's Pizza Hub Logo"
           className="hidden sm:block h-32 w-32"
         />
         <h1 className="text-4xl lg:text-5xl text-orange-500 font-semibold mt-4">
           <span className="text-orange-700">About</span>
-          <br /> Pizza Palette
+          <br /> Aditya's Pizza Hub
         </h1>
       </div>
 
@@ -22,10 +22,7 @@ function AboutScreen() {
             Introduction
           </h2>
           <p className="text-gray-800 text-lg leading-relaxed">
-            Pizza Palette is a pizza ordering app that allows you to create your
-            own custom pizza. You can choose from a variety of toppings and
-            sauces to create your dream pizza. You can also choose from a
-            selection of pre-made pizzas.
+            Aditya's Pizza Hub is your go-to place for creating personalized pizzas online! Choose from a wide range of fresh toppings and sauces to build your dream pizza, or explore our curated menu of classic and signature pizzas.
           </p>
         </article>
 
@@ -34,22 +31,19 @@ function AboutScreen() {
             Our Mission
           </h2>
           <p className="text-gray-800 text-lg leading-relaxed">
-            Our mission is to provide you with the best pizza ordering
-            experience. We want to make it easy for you to order your favorite
-            pizza. We also want to make it easy for you to create your own
-            custom pizza.
+            Our mission is to serve you the freshest, tastiest pizzas with a seamless and delightful ordering experience. We believe pizza is personal, and we make it easy for you to craft exactly what you crave!
           </p>
         </article>
 
         <article className="mb-4">
           <h2 className="text-2xl text-black font-semibold mb-2">Contact Us</h2>
           <p className="text-gray-800 text-lg leading-relaxed">
-            If you have any questions or concerns, please contact us at{' '}
+            If you have any questions or suggestions, feel free to reach out at{' '}
             <a
-              href="mailto:contact@pizzapalette.com"
+              href="mailto:contact@adityapizzahub.com"
               className="text-orange-500 hover:text-orange-700"
             >
-              contact@pizzapalette.com
+              contact@adityapizzahub.com
             </a>
           </p>
         </article>

@@ -3,10 +3,14 @@ const colors = require('colors');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const express = require('express');
-console.log("🚀 Aditya's Pizza Delivery API running on port", PORT);
-
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+
+// Configure DotEnv (sabse pehle load karo)
+dotenv.config();
+
+// Configure Port
+const PORT = process.env.PORT || 5000;
 
 // Import Configs and Middlewares
 const connectDb = require('./config/db');
@@ -18,9 +22,6 @@ const userRoutes = require('./routes/userRoutes');
 const pizzaRoutes = require('./routes/pizzaRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const inventoryRoutes = require('./routes/inventoryRoutes');
-
-// Configure DotEnv
-dotenv.config();
 
 // Create Express App
 const app = express();
@@ -74,13 +75,8 @@ app.use('/api/stocks', inventoryRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-// Configure Port
-const PORT = process.env.PORT || 5000;
-
 // Start the server
-app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-  )
-);
+app.listen(PORT, () => {
+  console.log(`🚀 Aditya's Pizza Delivery API running on port ${PORT}`.yellow.bold);
+  console.log(`Server running in ${process.env.NODE_ENV} mode`.cyan.bold);
+});

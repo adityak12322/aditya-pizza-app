@@ -12,7 +12,7 @@ import { clearOrderData } from '../../redux/slices/orderSlice';
 import { clearInventoryData } from '../../redux/slices/inventorySlice';
 
 // Import Images
-import Logo from '/android-chrome-192x192.png';
+import Logo from '/images/generated-image.png';  // Change this path to your custom logo image
 
 // Import Components
 import Button from '../ui/Button';
@@ -42,22 +42,10 @@ function MainNavbar() {
   }, [dropdownRef]);
 
   const NavItems = [
-    {
-      route: '/',
-      name: 'Home',
-    },
-    {
-      route: '/menu',
-      name: 'Menu',
-    },
-    {
-      route: '/my-orders',
-      name: 'My Orders',
-    },
-    {
-      route: '/about',
-      name: 'About',
-    },
+    { route: '/', name: 'Home' },
+    { route: '/menu', name: 'Menu' },
+    { route: '/my-orders', name: 'My Orders' },
+    { route: '/about', name: 'About' },
   ];
 
   const dispatch = useDispatch();
@@ -85,28 +73,27 @@ function MainNavbar() {
     <>
       <nav className="fixed bg-white w-screen flex flex-row items-center justify-between px-6 sm:px-16 shadow-sm space-x-3">
         <NavLink
-          href="/"
+          to="/"
           className="flex flex-row justify-center items-center text-black font-bold text-lg sm:text-3xl"
         >
           <img
             src={Logo}
-            alt="Pizza Palette Logo"
+            alt="Aditya's Pizza Hub"
             className="h-10 w-10 sm:h-14 sm:w-14 mr-2"
           />
-          Pizza Palette
+          Aditya's Pizza Hub
         </NavLink>
-        {/* // Desktop Menu */}
+        {/* Desktop Menu */}
         <div className="items-center justify-center space-x-4 hidden md:inline-flex">
           {NavItems.map((navItem, index) => (
             <NavLink
               key={index}
               to={navItem.route}
-              className={({ isActive }) => {
-                if (isActive) {
-                  return 'text-lg text-orange-500 border-b-4 border-orange-500';
-                }
-                return 'text-lg  text-black hover:text-orange-500 hover:border-b-4 hover:border-orange-500';
-              }}
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-lg text-orange-500 border-b-4 border-orange-500'
+                  : 'text-lg text-black hover:text-orange-500 hover:border-b-4 hover:border-orange-500'
+              }
             >
               {navItem.name}
             </NavLink>
@@ -160,13 +147,13 @@ function MainNavbar() {
           </svg>
         </button>
       </nav>
-      {/* // Mobile Menu */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="fixed font-semibold inset-0 bg-gray-800 bg-opacity-90 flex items-center justify-center md:hidden transition-all duration-300 ease-in-out">
           {/* Nav Menu Close Button */}
           <button
             type="button"
-            className="absolute top-8 right-9 text-white hover:text-orange-500 focus:outline-none  md:hidden"
+            className="absolute top-8 right-9 text-white hover:text-orange-500 focus:outline-none md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
@@ -190,12 +177,9 @@ function MainNavbar() {
                 key={index}
                 to={navItem.route}
                 onClick={() => setIsOpen(!isOpen)}
-                className={({ isActive }) => {
-                  if (isActive) {
-                    return 'text-2xl text-orange-500';
-                  }
-                  return 'text-2xl text-white hover:text-orange-500';
-                }}
+                className={({ isActive }) =>
+                  isActive ? 'text-2xl text-orange-500' : 'text-2xl text-white hover:text-orange-500'
+                }
               >
                 {navItem.name}
               </NavLink>
